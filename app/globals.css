@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand palette (Bella Rawlings Brand Kit v1.0) ─────────────
+     Desert Cream, Saddle Brown, Arizona Clay, Sagebrush,
+     Midnight Ranch, Antique Gold. Edit here to re-skin the site. */
+  --color-ink: #1d1b18; /* Midnight Ranch — page background */
+  --color-cream: #f6f1e8; /* Desert Cream — primary text */
+  --color-clay: #c2794a; /* Arizona Clay (lightened for contrast on dark) */
+  --color-gold: #c8a25d; /* Antique Gold */
+  --color-sage: #7e8d6d; /* Sagebrush */
+  --color-saddle: #7a4a2c; /* Saddle Brown */
+
+  --font-display: var(--font-display-var), "Playfair Display", Georgia, serif;
+  --font-body: var(--font-body-var), "Montserrat", ui-sans-serif, system-ui, sans-serif;
+
+  --animate-marquee: marquee 28s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-cream);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-ink);
+}
+
+/* Desert-sunset gradient used for accent text and buttons */
+.text-gradient {
+  background: linear-gradient(100deg, var(--color-clay), var(--color-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-gradient-brand {
+  background: linear-gradient(100deg, var(--color-clay), var(--color-gold));
+}
+
+/* Warm lantern glow behind hero sections */
+.stage-glow {
+  background:
+    radial-gradient(ellipse 60% 45% at 25% 0%, rgba(200, 162, 93, 0.14), transparent 70%),
+    radial-gradient(ellipse 55% 40% at 80% 10%, rgba(168, 101, 60, 0.12), transparent 70%);
+}
+
+/* Fade-up entrance for page content */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.fade-up-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.fade-up-delay-2 {
+  animation-delay: 0.24s;
+}
+
+.fade-up-delay-3 {
+  animation-delay: 0.36s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up,
+  .fade-up-delay-1,
+  .fade-up-delay-2,
+  .fade-up-delay-3 {
+    animation: none;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+}
