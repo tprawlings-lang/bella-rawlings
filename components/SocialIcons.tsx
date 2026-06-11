@@ -71,7 +71,7 @@ export function SocialIconRow({ className = "" }: { className?: string }) {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`${site.artistName} on ${name}`}
-          className="text-cream/60 transition hover:text-clay"
+          className="text-ink/60 transition hover:text-clay"
         >
           <Icon className="h-6 w-6" />
         </a>

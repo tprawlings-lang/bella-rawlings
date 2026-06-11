@@ -16,7 +16,7 @@ export default function ContentPage() {
       <h1 className="fade-up font-display text-5xl font-extrabold sm:text-7xl">
         <span className="text-gradient">Watch</span>
       </h1>
-      <p className="fade-up fade-up-delay-1 mt-4 max-w-xl text-cream/60">
+      <p className="fade-up fade-up-delay-1 mt-4 max-w-xl text-ink/60">
         The latest from TikTok and Instagram — covers, originals, and everything in between.
       </p>
 

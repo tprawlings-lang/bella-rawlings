@@ -17,7 +17,7 @@ function FeedCard({ post }: { post: SocialPost }) {
       href={post.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative block aspect-[3/4] overflow-hidden rounded-xl border border-cream/10 bg-cream/5"
+      className="group relative block aspect-[3/4] overflow-hidden rounded-xl border border-ink/10 bg-ink/5"
     >
       {post.thumbnailUrl ? (
         <Image
@@ -30,12 +30,12 @@ function FeedCard({ post }: { post: SocialPost }) {
       ) : (
         <div className="stage-glow absolute inset-0" />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-cream/90 via-cream/10 to-transparent" />
       <div className="absolute right-0 bottom-0 left-0 p-3">
         {post.caption && (
-          <p className="line-clamp-2 text-xs text-cream/90">{post.caption}</p>
+          <p className="line-clamp-2 text-xs text-ink/90">{post.caption}</p>
         )}
-        <div className="mt-1.5 flex items-center gap-2 text-[11px] text-cream/60">
+        <div className="mt-1.5 flex items-center gap-2 text-[11px] text-ink/60">
           {post.platform === "tiktok" ? (
             <TikTokIcon className="h-3.5 w-3.5" />
           ) : (
@@ -59,15 +59,15 @@ function FollowCta({ platform }: { platform: SocialPlatform }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex flex-col items-center gap-3 rounded-2xl border border-dashed border-cream/20 px-6 py-12 text-center transition hover:border-clay/60"
+      className="flex flex-col items-center gap-3 rounded-2xl border border-dashed border-ink/20 px-6 py-12 text-center transition hover:border-clay/60"
     >
       {platform === "tiktok" ? (
-        <TikTokIcon className="h-8 w-8 text-cream/60" />
+        <TikTokIcon className="h-8 w-8 text-ink/60" />
       ) : (
-        <InstagramIcon className="h-8 w-8 text-cream/60" />
+        <InstagramIcon className="h-8 w-8 text-ink/60" />
       )}
-      <span className="text-sm text-cream/60">
-        Follow <span className="font-semibold text-cream">@{handle}</span> on{" "}
+      <span className="text-sm text-ink/60">
+        Follow <span className="font-semibold text-ink">@{handle}</span> on{" "}
         {platform === "tiktok" ? "TikTok" : "Instagram"}
       </span>
     </a>

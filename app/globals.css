@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  /* ── Brand palette (Bella Rawlings Brand Kit v1.0) ─────────────
-     Desert Cream, Saddle Brown, Arizona Clay, Sagebrush,
-     Midnight Ranch, Antique Gold. Edit here to re-skin the site. */
-  --color-ink: #1d1b18; /* Midnight Ranch — page background */
-  --color-cream: #f6f1e8; /* Desert Cream — primary text */
-  --color-clay: #c2794a; /* Arizona Clay (lightened for contrast on dark) */
-  --color-gold: #c8a25d; /* Antique Gold */
-  --color-sage: #7e8d6d; /* Sagebrush */
+  /* ── Brand palette (Bella Rawlings Brand Kit v1.0), light theme ──
+     Desert Cream background, Midnight Ranch text, Arizona Clay +
+     Antique Gold accents, Sagebrush for success states.
+     Edit here to re-skin the site. */
+  --color-cream: #faf6ee; /* Desert Cream (brightened) — page background */
+  --color-ink: #2b2620; /* Midnight Ranch (softened) — primary text */
+  --color-clay: #a8653c; /* Arizona Clay */
+  --color-gold: #8f6e33; /* Antique Gold, deepened for legible text */
+  --color-sage: #5f6f4e; /* Sagebrush, deepened for badges */
   --color-saddle: #7a4a2c; /* Saddle Brown */
 
   --font-display: var(--font-display-var), "Playfair Display", Georgia, serif;
@@ -31,34 +32,36 @@ html {
 }
 
 body {
-  background-color: var(--color-ink);
-  color: var(--color-cream);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: var(--color-gold);
+  background: #e9c98f;
   color: var(--color-ink);
 }
 
-/* Desert-sunset gradient used for accent text and buttons */
+/* Desert-sunset gradient for big display text */
 .text-gradient {
-  background: linear-gradient(100deg, var(--color-clay), var(--color-gold));
+  background: linear-gradient(100deg, #b4713f, #c8a25d);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
+/* Rich warm gradient for buttons (light text on top) */
 .bg-gradient-brand {
-  background: linear-gradient(100deg, var(--color-clay), var(--color-gold));
+  background: linear-gradient(100deg, #a8653c, #8f6e33);
 }
 
-/* Warm lantern glow behind hero sections */
+/* Soft golden-hour glow behind hero sections — bright and airy */
 .stage-glow {
   background:
-    radial-gradient(ellipse 60% 45% at 25% 0%, rgba(200, 162, 93, 0.14), transparent 70%),
-    radial-gradient(ellipse 55% 40% at 80% 10%, rgba(168, 101, 60, 0.12), transparent 70%);
+    radial-gradient(ellipse 60% 45% at 22% 0%, rgba(233, 188, 152, 0.5), transparent 70%),
+    radial-gradient(ellipse 55% 40% at 80% 8%, rgba(231, 205, 150, 0.45), transparent 70%),
+    radial-gradient(ellipse 70% 50% at 50% 110%, rgba(244, 218, 198, 0.35), transparent 70%);
 }
 
 /* Fade-up entrance for page content */

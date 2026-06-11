@@ -45,7 +45,7 @@ export default function ShowsPage() {
       <h1 className="fade-up font-display text-5xl font-extrabold sm:text-7xl">
         <span className="text-gradient">Shows</span>
       </h1>
-      <p className="fade-up fade-up-delay-1 mt-4 max-w-xl text-cream/60">
+      <p className="fade-up fade-up-delay-1 mt-4 max-w-xl text-ink/60">
         Catch {site.artistName} live around {site.areaServed} — and add the dates to your
         calendar so you never miss one.
       </p>

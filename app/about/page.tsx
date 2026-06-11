@@ -17,15 +17,15 @@ export default function AboutPage() {
         {about.headline}
       </h1>
 
-      <div className="fade-up fade-up-delay-2 mt-10 space-y-6 leading-relaxed text-cream/75">
+      <div className="fade-up fade-up-delay-2 mt-10 space-y-6 leading-relaxed text-ink/75">
         {about.story.map((paragraph, i) => (
           <p key={i}>{paragraph}</p>
         ))}
       </div>
 
       {about.influences.length > 0 && (
-        <div className="mt-12 border-t border-cream/10 pt-8">
-          <p className="text-sm tracking-[0.3em] text-cream/40 uppercase">Influences</p>
+        <div className="mt-12 border-t border-ink/10 pt-8">
+          <p className="text-sm tracking-[0.3em] text-ink/40 uppercase">Influences</p>
           <p className="font-display mt-3 text-2xl font-bold text-gold">
             {about.influences.join(" · ")}
           </p>
@@ -36,7 +36,7 @@ export default function AboutPage() {
         <SocialIconRow />
         <Link
           href="/book"
-          className="bg-gradient-brand rounded-full px-7 py-3 text-sm font-semibold tracking-wide text-ink uppercase transition hover:opacity-90"
+          className="bg-gradient-brand rounded-full px-7 py-3 text-sm font-semibold tracking-wide text-cream uppercase transition hover:opacity-90"
         >
           Book Her for Your Event
         </Link>

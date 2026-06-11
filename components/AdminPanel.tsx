@@ -4,10 +4,10 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useState } from "react";
 
 const inputClass =
-  "w-full rounded-xl border border-cream/20 bg-cream/5 px-4 py-3 text-sm placeholder:text-cream/30 focus:border-clay focus:outline-none";
+  "w-full rounded-xl border border-ink/20 bg-ink/5 px-4 py-3 text-sm placeholder:text-ink/30 focus:border-clay focus:outline-none";
 
 const buttonClass =
-  "bg-gradient-brand rounded-full px-6 py-2.5 text-sm font-semibold tracking-wide text-ink uppercase transition hover:opacity-90 disabled:opacity-50";
+  "bg-gradient-brand rounded-full px-6 py-2.5 text-sm font-semibold tracking-wide text-cream uppercase transition hover:opacity-90 disabled:opacity-50";
 
 function ErrorBanner() {
   const params = useSearchParams();
@@ -96,7 +96,7 @@ export function AdminLogin({
         <button
           type="button"
           onClick={() => setMode(mode === "email" ? "password" : "email")}
-          className="block text-xs text-cream/50 underline hover:text-cream"
+          className="block text-xs text-ink/50 underline hover:text-ink"
         >
           {mode === "email" ? "Use a password instead" : "Use a sign-in link instead"}
         </button>
@@ -121,7 +121,7 @@ export function DisconnectButton({ platform }: { platform: "instagram" | "tiktok
         });
         router.refresh();
       }}
-      className="text-xs tracking-widest text-cream/50 uppercase underline transition hover:text-clay disabled:opacity-50"
+      className="text-xs tracking-widest text-ink/50 uppercase underline transition hover:text-clay disabled:opacity-50"
     >
       {busy ? "…" : "Disconnect"}
     </button>
@@ -136,7 +136,7 @@ export function SignOutButton() {
         await fetch("/api/auth/admin", { method: "DELETE" });
         router.refresh();
       }}
-      className="text-xs tracking-widest text-cream/50 uppercase underline transition hover:text-clay"
+      className="text-xs tracking-widest text-ink/50 uppercase underline transition hover:text-clay"
     >
       Sign out
     </button>

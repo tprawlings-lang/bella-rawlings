@@ -15,7 +15,7 @@ const EVENT_TYPES = [
 const BUDGETS = ["Under $500", "$500–$1,000", "$1,000–$2,500", "$2,500+", "Not sure yet"];
 
 const inputClass =
-  "w-full rounded-xl border border-cream/20 bg-cream/5 px-4 py-3 text-sm placeholder:text-cream/30 focus:border-clay focus:outline-none";
+  "w-full rounded-xl border border-ink/20 bg-ink/5 px-4 py-3 text-sm placeholder:text-ink/30 focus:border-clay focus:outline-none";
 
 export function BookingForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
@@ -48,7 +48,7 @@ export function BookingForm() {
     return (
       <div className="rounded-2xl border border-gold/40 bg-gold/10 p-8 text-center">
         <p className="font-display text-2xl font-bold">Inquiry sent!</p>
-        <p className="mt-2 text-sm text-cream/70">
+        <p className="mt-2 text-sm text-ink/70">
           Thanks for reaching out — Bella&apos;s management will reply soon.
         </p>
       </div>
@@ -74,7 +74,7 @@ export function BookingForm() {
             Event type *
           </option>
           {EVENT_TYPES.map((t) => (
-            <option key={t} value={t} className="bg-ink">
+            <option key={t} value={t} className="bg-cream">
               {t}
             </option>
           ))}
@@ -85,14 +85,14 @@ export function BookingForm() {
           name="date"
           type="date"
           aria-label="Event date"
-          className={`${inputClass} [color-scheme:dark]`}
+          className={`${inputClass} [color-scheme:light]`}
         />
         <select name="budget" defaultValue="" className={inputClass}>
           <option value="" disabled>
             Budget range
           </option>
           {BUDGETS.map((b) => (
-            <option key={b} value={b} className="bg-ink">
+            <option key={b} value={b} className="bg-cream">
               {b}
             </option>
           ))}
@@ -117,7 +117,7 @@ export function BookingForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="bg-gradient-brand rounded-full px-8 py-3 text-sm font-semibold tracking-wide text-ink uppercase transition hover:opacity-90 disabled:opacity-50"
+        className="bg-gradient-brand rounded-full px-8 py-3 text-sm font-semibold tracking-wide text-cream uppercase transition hover:opacity-90 disabled:opacity-50"
       >
         {status === "sending" ? "Sending…" : "Send inquiry"}
       </button>

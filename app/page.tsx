@@ -13,12 +13,12 @@ export const revalidate = 3600;
 function Marquee() {
   const items = Array(8).fill(`${site.artistName} ✦ `);
   return (
-    <div className="overflow-hidden border-y border-cream/10 py-3" aria-hidden>
+    <div className="overflow-hidden border-y border-ink/10 py-3" aria-hidden>
       <div className="animate-marquee flex w-max whitespace-nowrap">
         {[0, 1].map((copy) => (
           <span
             key={copy}
-            className="font-display pr-2 text-sm tracking-[0.35em] text-cream/40 uppercase"
+            className="font-display pr-2 text-sm tracking-[0.35em] text-ink/40 uppercase"
           >
             {items.join("")}
           </span>
@@ -37,7 +37,7 @@ export default function HomePage() {
       {/* Hero — email signup above the fold, per spec */}
       <section className="stage-glow relative">
         <div className="mx-auto flex max-w-6xl flex-col items-start px-5 pt-20 pb-16 sm:pt-28 sm:pb-24">
-          <p className="fade-up text-sm tracking-[0.3em] text-cream/50 uppercase">
+          <p className="fade-up text-sm tracking-[0.3em] text-ink/50 uppercase">
             {site.tagline} · {site.city}
           </p>
           <h1 className="fade-up fade-up-delay-1 font-display mt-4 text-6xl leading-[0.95] font-extrabold tracking-tight sm:text-8xl lg:text-9xl">
@@ -48,19 +48,19 @@ export default function HomePage() {
           <div className="fade-up fade-up-delay-2 mt-8 flex flex-wrap items-center gap-5">
             <Link
               href="/music"
-              className="bg-gradient-brand rounded-full px-7 py-3 text-sm font-semibold tracking-wide text-ink uppercase transition hover:opacity-90"
+              className="bg-gradient-brand rounded-full px-7 py-3 text-sm font-semibold tracking-wide text-cream uppercase transition hover:opacity-90"
             >
               Listen Now
             </Link>
             <Link
               href="/book"
-              className="rounded-full border border-cream/25 px-7 py-3 text-sm font-semibold tracking-wide uppercase transition hover:border-clay hover:text-clay"
+              className="rounded-full border border-ink/25 px-7 py-3 text-sm font-semibold tracking-wide uppercase transition hover:border-clay hover:text-clay"
             >
               Book Her for Your Event
             </Link>
           </div>
           <div className="fade-up fade-up-delay-3 mt-10">
-            <p className="text-sm text-cream/50">
+            <p className="text-sm text-ink/50">
               Be first to hear new songs and show announcements:
             </p>
             <EmailSignup className="mt-3" />
@@ -80,7 +80,7 @@ export default function HomePage() {
                 Latest {latest.type}
               </p>
               <h2 className="font-display mt-3 text-5xl font-bold sm:text-6xl">{latest.title}</h2>
-              <p className="mt-4 max-w-md text-cream/70">{latest.description}</p>
+              <p className="mt-4 max-w-md text-ink/70">{latest.description}</p>
               <Link
                 href="/music"
                 className="mt-6 inline-block text-sm font-semibold tracking-widest text-gold uppercase transition hover:text-clay"
@@ -92,8 +92,8 @@ export default function HomePage() {
               {latest.spotify.id ? (
                 <SpotifyEmbed kind={latest.spotify.kind} id={latest.spotify.id} />
               ) : (
-                <div className="stage-glow flex aspect-square max-h-80 w-full items-center justify-center rounded-2xl border border-cream/10">
-                  <p className="font-display px-8 text-center text-2xl font-bold text-cream/60">
+                <div className="stage-glow flex aspect-square max-h-80 w-full items-center justify-center rounded-2xl border border-ink/10">
+                  <p className="font-display px-8 text-center text-2xl font-bold text-ink/60">
                     “{latest.title}” — out{" "}
                     {new Date(latest.releaseDate + "T00:00:00").toLocaleDateString("en-US", {
                       month: "long",
@@ -109,7 +109,7 @@ export default function HomePage() {
 
       {/* Next 3 shows */}
       {nextShows.length > 0 && (
-        <section className="border-y border-cream/10 bg-cream/[0.03]">
+        <section className="border-y border-ink/10 bg-ink/[0.03]">
           <div className="mx-auto max-w-6xl px-5 py-14">
             <div className="flex items-end justify-between">
               <h2 className="font-display text-3xl font-bold sm:text-4xl">Upcoming shows</h2>
@@ -120,7 +120,7 @@ export default function HomePage() {
                 All dates →
               </Link>
             </div>
-            <ul className="mt-6 divide-y divide-cream/10">
+            <ul className="mt-6 divide-y divide-ink/10">
               {nextShows.map((show) => {
                 const d = showDate(show);
                 return (
@@ -136,14 +136,14 @@ export default function HomePage() {
                     </div>
                     <div className="min-w-0">
                       <p className="font-display truncate text-lg font-bold">{show.venueName}</p>
-                      <p className="truncate text-sm text-cream/60">{show.city}</p>
+                      <p className="truncate text-sm text-ink/60">{show.city}</p>
                     </div>
                     {show.ticketUrl && !show.soldOut && (
                       <a
                         href={show.ticketUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="ml-auto shrink-0 rounded-full border border-cream/25 px-5 py-2 text-xs font-semibold tracking-widest uppercase transition hover:border-clay hover:text-clay"
+                        className="ml-auto shrink-0 rounded-full border border-ink/25 px-5 py-2 text-xs font-semibold tracking-widest uppercase transition hover:border-clay hover:text-clay"
                       >
                         Tickets
                       </a>
@@ -175,11 +175,11 @@ export default function HomePage() {
       </section>
 
       {/* Bio teaser */}
-      <section className="border-t border-cream/10">
+      <section className="border-t border-ink/10">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 py-20 md:grid-cols-2">
           <div>
             <h2 className="font-display text-4xl font-bold sm:text-5xl">The story so far</h2>
-            <p className="mt-5 max-w-lg leading-relaxed text-cream/70">{epk.shortBio}</p>
+            <p className="mt-5 max-w-lg leading-relaxed text-ink/70">{epk.shortBio}</p>
             <Link
               href="/about"
               className="mt-6 inline-block text-sm font-semibold tracking-widest text-gold uppercase transition hover:text-clay"
@@ -189,13 +189,13 @@ export default function HomePage() {
           </div>
           <div className="md:pt-3">
             <p className="font-display text-2xl font-bold">Planning an event?</p>
-            <p className="mt-2 max-w-sm text-sm text-cream/50">
+            <p className="mt-2 max-w-sm text-sm text-ink/50">
               Weddings, corporate events, anthems, private parties — {site.artistName} performs
               across {site.areaServed}.
             </p>
             <Link
               href="/book"
-              className="bg-gradient-brand mt-5 inline-block rounded-full px-7 py-3 text-sm font-semibold tracking-wide text-ink uppercase transition hover:opacity-90"
+              className="bg-gradient-brand mt-5 inline-block rounded-full px-7 py-3 text-sm font-semibold tracking-wide text-cream uppercase transition hover:opacity-90"
             >
               Booking inquiry
             </Link>

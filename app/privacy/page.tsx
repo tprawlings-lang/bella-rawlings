@@ -15,13 +15,13 @@ export default function PrivacyPage() {
   return (
     <div className="mx-auto max-w-3xl px-5 py-16">
       <h1 className="font-display text-4xl font-extrabold sm:text-5xl">Privacy Policy</h1>
-      <div className="mt-8 space-y-6 text-sm leading-relaxed text-cream/75">
+      <div className="mt-8 space-y-6 text-sm leading-relaxed text-ink/75">
         <p>
           This website is operated by {site.siteOperator} on behalf of the artist{" "}
           {site.artistName}. We keep things simple and collect as little as possible.
         </p>
 
-        <h2 className="font-display pt-2 text-xl font-bold text-cream">What we collect</h2>
+        <h2 className="font-display pt-2 text-xl font-bold text-ink">What we collect</h2>
         <p>
           <strong>Mailing list:</strong> your email address — and nothing else. No names, ages,
           birthdates, or locations. We use double opt-in: nothing is stored until you click the
@@ -38,13 +38,13 @@ export default function PrivacyPage() {
           we do not sell or share any data.
         </p>
 
-        <h2 className="font-display pt-2 text-xl font-bold text-cream">Why we collect it</h2>
+        <h2 className="font-display pt-2 text-xl font-bold text-ink">Why we collect it</h2>
         <p>
           The mailing list is used only to send updates about new music, shows, and merch. The
           booking form is used only to respond to your inquiry.
         </p>
 
-        <h2 className="font-display pt-2 text-xl font-bold text-cream">
+        <h2 className="font-display pt-2 text-xl font-bold text-ink">
           Unsubscribing & deletion
         </h2>
         <p>
@@ -56,13 +56,13 @@ export default function PrivacyPage() {
           and we will delete it promptly.
         </p>
 
-        <h2 className="font-display pt-2 text-xl font-bold text-cream">Third-party services</h2>
+        <h2 className="font-display pt-2 text-xl font-bold text-ink">Third-party services</h2>
         <p>
           Pages on this site may embed content from TikTok, Instagram, Spotify, and YouTube.
           When you interact with those embeds, those platforms&apos; own privacy policies apply.
         </p>
 
-        <h2 className="font-display pt-2 text-xl font-bold text-cream">Contact</h2>
+        <h2 className="font-display pt-2 text-xl font-bold text-ink">Contact</h2>
         <p>
           Questions about this policy:{" "}
           <a href={`mailto:${site.guardianEmail}`} className="text-gold underline">
@@ -70,7 +70,7 @@ export default function PrivacyPage() {
           </a>
           .
         </p>
-        <p className="text-cream/40">Last updated: June 2026</p>
+        <p className="text-ink/40">Last updated: June 2026</p>
       </div>
     </div>
   );

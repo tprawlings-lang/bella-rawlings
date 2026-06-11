@@ -18,7 +18,7 @@ export default function EpkPage() {
       <h1 className="fade-up fade-up-delay-1 font-display mt-3 text-5xl font-extrabold sm:text-7xl">
         {site.artistName}
       </h1>
-      <p className="fade-up fade-up-delay-2 mt-2 text-cream/60">
+      <p className="fade-up fade-up-delay-2 mt-2 text-ink/60">
         {site.genre} · {site.city}
       </p>
 
@@ -27,10 +27,10 @@ export default function EpkPage() {
         {epk.stats.map((s) => (
           <div
             key={s.label}
-            className="rounded-2xl border border-cream/10 bg-cream/[0.03] p-5 text-center"
+            className="rounded-2xl border border-ink/10 bg-ink/[0.03] p-5 text-center"
           >
             <p className="font-display text-3xl font-bold text-gold">{s.value}</p>
-            <p className="mt-1 text-xs tracking-widest text-cream/50 uppercase">{s.label}</p>
+            <p className="mt-1 text-xs tracking-widest text-ink/50 uppercase">{s.label}</p>
           </div>
         ))}
       </div>
@@ -38,9 +38,9 @@ export default function EpkPage() {
       {/* Bios */}
       <section className="mt-14">
         <h2 className="font-display text-2xl font-bold">Short bio</h2>
-        <p className="mt-3 leading-relaxed text-cream/75">{epk.shortBio}</p>
+        <p className="mt-3 leading-relaxed text-ink/75">{epk.shortBio}</p>
         <h2 className="font-display mt-10 text-2xl font-bold">Full bio</h2>
-        <div className="mt-3 space-y-4 leading-relaxed text-cream/75">
+        <div className="mt-3 space-y-4 leading-relaxed text-ink/75">
           {epk.longBio.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
@@ -74,8 +74,8 @@ export default function EpkPage() {
           <div className="mt-4 space-y-5">
             {epk.press.map((p) => (
               <blockquote key={p.quote} className="border-l-2 border-gold pl-5">
-                <p className="font-display text-xl text-cream/85 italic">“{p.quote}”</p>
-                <cite className="mt-1 block text-sm text-cream/50 not-italic">— {p.source}</cite>
+                <p className="font-display text-xl text-ink/85 italic">“{p.quote}”</p>
+                <cite className="mt-1 block text-sm text-ink/50 not-italic">— {p.source}</cite>
               </blockquote>
             ))}
           </div>
@@ -86,14 +86,14 @@ export default function EpkPage() {
       {epk.photos.length > 0 && (
         <section className="mt-14">
           <h2 className="font-display text-2xl font-bold">Press photos</h2>
-          <p className="mt-1 text-sm text-cream/50">Click any photo to download the hi-res file.</p>
+          <p className="mt-1 text-sm text-ink/50">Click any photo to download the hi-res file.</p>
           <div className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3">
             {epk.photos.map((photo) => (
               <a
                 key={photo.file}
                 href={`/photos/${photo.file}`}
                 download
-                className="group relative block aspect-[4/5] overflow-hidden rounded-xl border border-cream/10"
+                className="group relative block aspect-[4/5] overflow-hidden rounded-xl border border-ink/10"
               >
                 <Image
                   src={`/photos/${photo.file}`}
@@ -109,9 +109,9 @@ export default function EpkPage() {
       )}
 
       {/* Contact — guardian/manager only */}
-      <section className="mt-14 rounded-2xl border border-cream/10 bg-cream/[0.03] p-8">
+      <section className="mt-14 rounded-2xl border border-ink/10 bg-ink/[0.03] p-8">
         <h2 className="font-display text-2xl font-bold">Booking & press contact</h2>
-        <p className="mt-2 text-sm text-cream/60">
+        <p className="mt-2 text-sm text-ink/60">
           All inquiries are handled by {site.artistName}&apos;s management:
         </p>
         <a

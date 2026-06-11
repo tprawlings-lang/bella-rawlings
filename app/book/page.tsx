@@ -49,7 +49,7 @@ export default function BookPage() {
         <br />
         for your event
       </h1>
-      <p className="fade-up fade-up-delay-1 mt-4 max-w-2xl text-cream/60">
+      <p className="fade-up fade-up-delay-1 mt-4 max-w-2xl text-ink/60">
         Weddings, corporate events, national anthems, private parties, festivals — live music
         across {site.areaServed}. Every inquiry goes straight to Bella&apos;s management.
       </p>
@@ -62,9 +62,9 @@ export default function BookPage() {
         <h2 className="font-display text-3xl font-bold">Common questions</h2>
         <dl className="mt-6 space-y-6">
           {faqs.map((f) => (
-            <div key={f.q} className="border-t border-cream/10 pt-5">
+            <div key={f.q} className="border-t border-ink/10 pt-5">
               <dt className="font-display text-lg font-bold text-gold">{f.q}</dt>
-              <dd className="mt-2 max-w-2xl text-sm leading-relaxed text-cream/65">{f.a}</dd>
+              <dd className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/65">{f.a}</dd>
             </div>
           ))}
         </dl>

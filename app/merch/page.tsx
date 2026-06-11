@@ -18,7 +18,7 @@ export default function MerchPage() {
       <h1 className="fade-up font-display text-5xl font-extrabold sm:text-7xl">
         <span className="text-gradient">Merch</span>
       </h1>
-      <p className="fade-up fade-up-delay-1 mt-6 text-cream/60">
+      <p className="fade-up fade-up-delay-1 mt-6 text-ink/60">
         The BR collection is in the works — hats, hoodies, and a few things we&apos;re keeping
         secret. Join the list and you&apos;ll know the moment it drops.
       </p>

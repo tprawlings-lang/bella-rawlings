@@ -24,7 +24,7 @@ function StreamButtons({ links }: { links: Release["links"] }) {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 rounded-full border border-cream/20 px-4 py-2 text-sm transition hover:border-clay hover:text-clay"
+          className="flex items-center gap-2 rounded-full border border-ink/20 px-4 py-2 text-sm transition hover:border-clay hover:text-clay"
         >
           <Icon className="h-4 w-4" />
           {label}
@@ -51,8 +51,8 @@ function ReleaseEmbed({ release }: { release: Release }) {
     );
   }
   return (
-    <div className="stage-glow flex h-40 items-center justify-center rounded-2xl border border-cream/10">
-      <p className="text-sm tracking-widest text-cream/50 uppercase">
+    <div className="stage-glow flex h-40 items-center justify-center rounded-2xl border border-ink/10">
+      <p className="text-sm tracking-widest text-ink/50 uppercase">
         Streaming links coming soon
       </p>
     </div>
@@ -65,7 +65,7 @@ function ReleaseList({ items }: { items: Release[] }) {
       {items.map((release) => (
         <article
           key={release.title}
-          className="grid gap-8 border-t border-cream/10 pt-12 md:grid-cols-2"
+          className="grid gap-8 border-t border-ink/10 pt-12 md:grid-cols-2"
         >
           <div>
             <p className="text-sm tracking-[0.3em] text-clay uppercase">
@@ -77,7 +77,7 @@ function ReleaseList({ items }: { items: Release[] }) {
               })}
             </p>
             <h3 className="font-display mt-2 text-4xl font-bold sm:text-5xl">{release.title}</h3>
-            <p className="mt-4 max-w-md text-cream/70">{release.description}</p>
+            <p className="mt-4 max-w-md text-ink/70">{release.description}</p>
             <StreamButtons links={release.links} />
           </div>
           <div>
@@ -98,7 +98,7 @@ export default function MusicPage() {
       <h1 className="fade-up font-display text-5xl font-extrabold sm:text-7xl">
         <span className="text-gradient">Music</span>
       </h1>
-      <p className="fade-up fade-up-delay-1 mt-4 max-w-xl text-cream/60">
+      <p className="fade-up fade-up-delay-1 mt-4 max-w-xl text-ink/60">
         Originals and covers, newest first — and everywhere you can stream them.
       </p>
 

@@ -11,7 +11,7 @@ export function SpotifyEmbed({
   if (!id) return null;
   return (
     <iframe
-      src={`https://open.spotify.com/embed/${kind}/${id}?theme=0`}
+      src={`https://open.spotify.com/embed/${kind}/${id}`}
       width="100%"
       height={compact ? 152 : kind === "album" ? 352 : 152}
       frameBorder="0"

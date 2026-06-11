@@ -49,19 +49,19 @@ export function EmailSignup({ className = "" }: { className?: string }) {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="your@email.com"
           aria-label="Email address"
-          className="w-full rounded-full border border-cream/20 bg-cream/5 px-4 py-2.5 text-sm placeholder:text-cream/30 focus:border-clay focus:outline-none"
+          className="w-full rounded-full border border-ink/20 bg-ink/5 px-4 py-2.5 text-sm placeholder:text-ink/30 focus:border-clay focus:outline-none"
         />
         <button
           type="submit"
           disabled={status === "sending"}
-          className="bg-gradient-brand shrink-0 rounded-full px-5 py-2.5 text-sm font-semibold text-ink transition hover:opacity-90 disabled:opacity-50"
+          className="bg-gradient-brand shrink-0 rounded-full px-5 py-2.5 text-sm font-semibold text-cream transition hover:opacity-90 disabled:opacity-50"
         >
           {status === "sending" ? "…" : "Join"}
         </button>
       </div>
-      <p className="mt-2 text-[11px] text-cream/35">
+      <p className="mt-2 text-[11px] text-ink/35">
         Email only, double opt-in, unsubscribe anytime.{" "}
-        <Link href="/privacy" className="underline hover:text-cream/60">
+        <Link href="/privacy" className="underline hover:text-ink/60">
           Privacy
         </Link>
       </p>

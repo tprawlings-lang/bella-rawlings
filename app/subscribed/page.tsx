@@ -29,10 +29,10 @@ export default async function SubscribedPage({
       <h1 className="font-display text-5xl font-extrabold">
         <span className="text-gradient">{copy.title}</span>
       </h1>
-      <p className="mt-5 text-cream/65">{copy.body}</p>
+      <p className="mt-5 text-ink/65">{copy.body}</p>
       <Link
         href="/"
-        className="bg-gradient-brand mt-8 inline-block rounded-full px-7 py-3 text-sm font-semibold tracking-wide text-ink uppercase transition hover:opacity-90"
+        className="bg-gradient-brand mt-8 inline-block rounded-full px-7 py-3 text-sm font-semibold tracking-wide text-cream uppercase transition hover:opacity-90"
       >
         Back to the music
       </Link>
